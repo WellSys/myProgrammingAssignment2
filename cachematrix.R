@@ -3,7 +3,7 @@
 # To validate:
 # m <- makeCacheMatrix()
 # m$set(matrix(c(0,2,2,0), 2, 2)) or an alternative invertible matrix up to the memory capacity of the host computer.
-# m$get(m)
+# m$get()
 # cacheSolve(m)
 # cacheSolve(m)
 # In this syntax, the variable "m" can be any letter.
