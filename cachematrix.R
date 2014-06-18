@@ -37,7 +37,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 # cacheSolve function receives a variable that is a matrix that is expected to have been defined as makeCacheMatrix(),
 # as in m <- makeCacheMatrix(), and then populated with an invertible matrix using the m$set() function that is nested 
-# in makeCacheMatrix(). In this syntax, the variable "m" can be any letter. j See validation instruction, above.
+# in makeCacheMatrix(). In this syntax, the variable "m" can be any letter. See validation instruction, above.
 
 # cacheSolve returns the inverted form of the submitted matrix.
  
@@ -59,7 +59,7 @@ cacheSolve <- function(x) {                     ## Receive makeCacheMatrix from 
         startingmatrix <- x$get()               ## Call the nested function x$get in makeCacheMatrix to obtain the UNinverted matrix with which to start, and assign it to startingmatrix.                         
         endingmatrix <- solve(startingmatrix)   ## Use solve() to invert the startingmatrix.  Assign the result to endingmatrix.
         x$set_cache_m(endingmatrix)             ## Call nested function x$set_cache_m() in makeCacheMatrix to set m in the cache environment to the local non-NULL inverted result in endingmatrix
-        endingmatrix                            ## Evaluate endingmatrix so as to return it to caller/console if cache_m is non NULL.
+        endingmatrix                            ## Evaluate endingmatrix so as to return it to caller/console if cache_m is NULL.
 }
 
 #
